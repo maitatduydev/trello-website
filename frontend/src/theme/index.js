@@ -1,60 +1,82 @@
-import { createTheme } from "@mui/material/styles";
+import { extendTheme } from "@mui/material/styles";
 
-export const theme = createTheme({
-    palette: {
-        primary: {
-            main: "#003459",
+export const theme = extendTheme({
+    colorSchemeSelector: "class",
+
+    colorSchemes: {
+        light: {
+            palette: {
+                primary: {
+                    main: "#2563EB",
+                },
+
+                secondary: {
+                    main: "#64748B",
+                },
+
+                background: {
+                    default: "#F8FAFC",
+
+                    paper: "#FFFFFF",
+                },
+
+                text: {
+                    primary: "#0F172A",
+                    secondary: "#64748B",
+                },
+
+                divider: "#E2E8F0",
+            },
         },
-        secondary: {
-            main: "#F7DBA7",
-        },
-        background: {
-            main: "#FCEED5",
-        },
-        text: {
-            primary: "#242B33",
-            secondary: "#FDFDFD",
+
+        dark: {
+            palette: {
+                primary: {
+                    main: "#60A5FA",
+                },
+
+                secondary: {
+                    main: "#94A3B8",
+                },
+
+                background: {
+                    default: "#0F172A",
+                    paper: "#1E293B",
+                },
+
+                text: {
+                    primary: "#F8FAFC",
+                    secondary: "#94A3B8",
+                },
+
+                divider: "#334155",
+            },
         },
     },
+
     typography: {
         fontFamily: "Be Vietnam Pro, Arial, sans-serif",
     },
 
     components: {
-        MuiCssBaseline: {
-            styleOverrides: {
-                body: {
-                    fontFamily: "Be Vietnam Pro, Arial, sans-serif",
-                },
-            },
-        },
         MuiButton: {
             defaultProps: {
                 disableElevation: true,
             },
+
             styleOverrides: {
                 root: {
-                    borderRadius: "57px",
-                    padding: "14px 35px",
-                    height: "48px",
-                    fontFamily: "Be Vietnam Pro",
                     textTransform: "none",
+                    borderRadius: 10,
+                    fontWeight: 600,
                 },
             },
         },
 
-        MuiInputBase: {
+        MuiCard: {
             styleOverrides: {
                 root: {
-                    fontFamily: "Be Vietnam Pro",
-                },
-            },
-        },
-
-        MuiTypography: {
-            styleOverrides: {
-                root: {
-                    fontFamily: "Be Vietnam Pro",
+                    borderRadius: 16,
                 },
             },
         },

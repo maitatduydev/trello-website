@@ -1,12 +1,9 @@
-import Button from "@mui/material/Button";
-import AdsClickIcon from "@mui/icons-material/AdsClick";
+import ToggleTheme from "./components/ToggleTheme";
 
 export default function App() {
     return (
         <>
-            <Button color="primary" variant="contained" size="small" startIcon={<AdsClickIcon />}>
-                Click me
-            </Button>
+            <ToggleTheme />
         </>
     );
 }
