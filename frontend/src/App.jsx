@@ -4,7 +4,7 @@ import AdsClickIcon from "@mui/icons-material/AdsClick";
 export default function App() {
     return (
         <>
-            <Button variant="contained" size="small" startIcon={<AdsClickIcon />}>
+            <Button color="primary" variant="contained" size="small" startIcon={<AdsClickIcon />}>
                 Click me
             </Button>
         </>
