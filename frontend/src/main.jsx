@@ -4,7 +4,7 @@ import { CssVarsProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 import "@fontsource/be-vietnam-pro";
-import { theme } from "./theme/index.js";
+import { theme } from "./theme/theme";
 import App from "./App";
 
 const storageManager = (params) => {
