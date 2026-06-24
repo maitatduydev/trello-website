@@ -1,7 +1,9 @@
-import { extendTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
-export const theme = extendTheme({
+export const theme = createTheme({
     colorSchemeSelector: "class",
+
+    cssVariables: true,
 
     colorSchemes: {
         light: {

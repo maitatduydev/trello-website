@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { CssVarsProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 import "@fontsource/be-vietnam-pro";
@@ -40,7 +40,7 @@ const storageManager = (params) => {
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <InitColorSchemeScript />
-        <CssVarsProvider
+        <ThemeProvider
             theme={theme}
             defaultMode="system"
             storageManager={storageManager}
@@ -48,6 +48,6 @@ createRoot(document.getElementById("root")).render(
         >
             <CssBaseline />
             <App />
-        </CssVarsProvider>
+        </ThemeProvider>
     </StrictMode>,
 );
