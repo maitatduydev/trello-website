@@ -1,4 +1,4 @@
-import ModeSelect from "../ModeSelect/ModeSelect";
+import ModeSelect from "~/components/ModeSelect/ModeSelect";
 import Box from "@mui/material/Box";
 
 export default function AppBar() {
