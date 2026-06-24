@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import LightMode from "@mui/icons-material/LightMode";
 import DarkMode from "@mui/icons-material/DarkMode";
 import SettingsBrightness from "@mui/icons-material/SettingsBrightness";
+import Container from "@mui/material/Container";
 
 export default function App() {
     const { mode, setMode } = useColorScheme();
@@ -21,36 +22,76 @@ export default function App() {
     };
 
     return (
-        <>
-            <FormControl sx={{ m: 1, minWidth: 180 }} size="small">
-                <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
-                <Select
-                    labelId="label-select-dark-light-mode"
-                    id="select-dark-light-mode"
-                    value={mode}
-                    label="Mode"
-                    onChange={handleChange}
-                >
-                    <MenuItem value={"light"}>
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                            <LightMode fontSize="small" />
-                            Light
-                        </Box>
-                    </MenuItem>
-                    <MenuItem value={"dark"}>
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                            <DarkMode fontSize="small" />
-                            Dark
-                        </Box>
-                    </MenuItem>
-                    <MenuItem value={"system"}>
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                            <SettingsBrightness fontSize="small" />
-                            System
-                        </Box>
-                    </MenuItem>
-                </Select>
-            </FormControl>
-        </>
+        <Container
+            disableGutters
+            maxWidth={false}
+            sx={{
+                height: "100vh",
+                backgroundColor: "background.default",
+            }}
+        >
+            <Box
+                sx={{
+                    backgroundColor: "primary.main",
+                    width: "100%",
+                    height: (theme) => theme.trelloCustom.appBarHeight,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                }}
+            >
+                <FormControl sx={{ m: 1, minWidth: 180, color: "text.primary" }} size="small">
+                    <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
+                    <Select
+                        labelId="label-select-dark-light-mode"
+                        id="select-dark-light-mode"
+                        value={mode}
+                        label="Mode"
+                        onChange={handleChange}
+                    >
+                        <MenuItem value={"light"}>
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                                <LightMode fontSize="small" />
+                                Light
+                            </Box>
+                        </MenuItem>
+                        <MenuItem value={"dark"}>
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                                <DarkMode fontSize="small" />
+                                Dark
+                            </Box>
+                        </MenuItem>
+                        <MenuItem value={"system"}>
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                                <SettingsBrightness fontSize="small" />
+                                System
+                            </Box>
+                        </MenuItem>
+                    </Select>
+                </FormControl>
+            </Box>
+            <Box
+                sx={{
+                    backgroundColor: "secondary.main",
+                    width: "100%",
+                    height: (theme) => theme.trelloCustom.boardBarHeight,
+                    display: "flex",
+                    alignItems: "center",
+                }}
+            >
+                Board Bar
+            </Box>
+            <Box
+                sx={{
+                    backgroundColor: "background.paper",
+                    width: "100%",
+                    height: "calc(100vh - 48px - 58px)",
+                    display: "flex",
+                    alignItems: "center",
+                }}
+            >
+                Board Content
+            </Box>
+        </Container>
     );
 }
