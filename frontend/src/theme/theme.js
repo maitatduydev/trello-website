@@ -125,6 +125,7 @@ export const theme = createTheme({
                     textTransform: "none",
                     borderRadius: 8,
                     fontWeight: 600,
+                    color: "currentColor",
                 },
             },
         },
@@ -133,7 +134,6 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: 12,
-
                     boxShadow: "0 1px 2px rgba(9,30,66,0.15)",
                 },
             },
@@ -164,7 +164,7 @@ export const theme = createTheme({
     },
 
     trelloCustom: {
-        appBarHeight: "48px",
+        appBarHeight: "60px",
         boardBarHeight: "58px",
     },
 });
